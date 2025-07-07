@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 """
 *OOPs Concepts in Python*
 
@@ -132,3 +134,34 @@ print(family_dog.get_age())
 print("Modifying private member using setter")
 family_dog.set_age(5)
 family_dog.display_info()
+
+
+"""
+5. Data Abstraction in Python
+Abstraction hides the internal implementation details while exposing only the necessary functionality.
+It helps focus on "what to do" rather than "how to do it."
+If you had to understand every single function in a big codebase, you would never code anything.
+
+Types of Abstraction:
+A. Partial Abstraction: Abstract class contains both abstract and concrete methods.
+B. Full Abstraction: Abstract class contains only abstract methods (like interfaces).
+"""
+
+
+class Cat(ABC):  # Abstract Class
+    def __init__(self, name):
+        self.name = name
+
+    @abstractmethod
+    def sound(self):  # Abstract Method
+        pass
+
+    def display_name(self):  # Concrete Method
+        print(f"Cat's Name: {self.name}")
+
+class Siames(Cat):  # Partial Abstraction
+    def sound(self):
+        print("Siames Miauuuuu!")
+
+michy = Siames("Mipi")
+michy.sound()
