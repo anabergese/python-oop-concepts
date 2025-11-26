@@ -14,7 +14,7 @@ from abc import ABC, abstractmethod
 
 """
 1. Class in Python
-Is a collection of objects. Classes are the blueprint for creating objects.
+Classes are the blueprint for creating objects.
 Defines a set of attributes and methods that the created objects (instances) can have.
 """
 
@@ -49,7 +49,7 @@ class Dog:
 
 """
 2. Objects in Python
-An Object is an instance of a Class. Its represents a specific implementation of a Class, and holds its own data.
+An Object is an instance of a Class. It represents a specific implementation of a Class, and holds its own data.
 - State: represented by their attributes
 - Behavior: represented by their methods
 - Identity: unique representation
